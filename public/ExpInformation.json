@@ -1,0 +1,151 @@
+[
+    {
+      "booking_id": "101",
+      "location": "Cox's Bazar",
+      "title": "Seaside Resort Deluxe Room",
+      "from_date": "2024-04-10",
+      "to_date": "2024-04-15",
+      "price": 150,
+      "size": "19*19m",
+      "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+
+      "guest": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://i.ibb.co/ccYS0FQ/outdoor-patio.jpg",
+      "category": "Executive",
+      "host": {
+        "name": "Rahim Ahmed",
+        "image": "https://example.com/host_image101.jpg",
+        "email": "rahim.ahmed@example.com"
+      }
+    },
+    {
+      "booking_id": "102",
+      "location": "Cox's Bazar",
+      "title": "Ocean View Standard at Cox's Palace",
+      "from_date": "2024-05-20",
+      "to_date": "2024-05-25",
+      "size": "19*19m",
+      "price": 250,
+      "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+
+      "guest": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://i.ibb.co/ccYS0FQ/outdoor-patio.jpg",
+      "category": "Standard",
+      "host": {
+        "name": "Fatima Khan",
+        "image": "https://example.com/host_image102.jpg",
+        "email": "fatima.khan@example.com"
+      }
+    },
+    {
+      "booking_id": "103",
+      "location": "Cox's Bazar",
+      "title": "Beachfront Spa at Sunrise Resort",
+      "from_date": "2024-06-15",
+      "to_date": "2024-06-20",
+      "size": "19*19m",
+      "price": 300,
+      "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+
+      "guest": 4,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "image": "https://i.ibb.co/ccYS0FQ/outdoor-patio.jpg",
+      "category": "Spa",
+      "host": {
+        "name": "Ayesha Rahman",
+        "image": "https://example.com/host_image103.jpg",
+        "email": "ayesha.rahman@example.com"
+      }
+    },
+    {
+        "booking_id": "113",
+        "location": "Cox's Bazar",
+        "title": "Family Room at Seacrest Hotel",
+        "from_date": "2025-04-10",
+        "to_date": "2025-04-15",
+        "price": 200,
+        "guest": 4,
+        "size": "18*18m",
+        "bedrooms": 2,
+        "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+  
+        "bathrooms": 1,
+        "image": "https://i.ibb.co/RQx2gZy/terrace-lounge-with-rattan-armchairs-seaview-luxury-resort-summer-holiday-concept.jpg",
+        "category": "Luxury",
+        "host": {
+          "name": "Javed Khan",
+          "image": "https://example.com/host_image113.jpg",
+          "email": "javed.khan@example.com"
+        }
+      },
+      {
+        "booking_id": "114",
+        "location": "Cox's Bazar",
+        "title": "Executive Standard at Seagreen Hotel",
+        "from_date": "2025-05-10",
+        "to_date": "2025-05-15",
+        "price": 300,
+        "guest": 3,
+        "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+  
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "size": "19*19m",
+        "image": "https://i.ibb.co/RQx2gZy/terrace-lounge-with-rattan-armchairs-seaview-luxury-resort-summer-holiday-concept.jpg",
+        "category": "Luxury",
+        "host": {
+          "name": "Rafiqul Islam",
+          "image": "https://example.com/host_image114.jpg",
+          "email": "rafiqul.islam@example.com"
+        }
+      },
+      {
+        "booking_id": "115",
+        "location": "Cox's Bazar",
+        "title": "Beachfront Chalet at Peninsula Chittagong",
+        "from_date": "2025-06-10",
+        "to_date": "2025-06-15",
+        "price": 350,
+        "size": "19*20 m",
+        "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+  
+        "guest": 2,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "image": "https://i.ibb.co/RQx2gZy/terrace-lounge-with-rattan-armchairs-seaview-luxury-resort-summer-holiday-concept.jpg",
+        "category": "Family",
+        "host": {
+          "name": "Farhana Begum",
+          "image": "https://example.com/host_image115.jpg",
+          "email": "farhana.begum@example.com"
+        }
+      },
+      {
+        "booking_id": "116",
+        "location": "Cox's Bazar",
+        "title": "Beachside Tent at Coral Island Resort",
+        "from_date": "2025-07-10",
+        "to_date": "2025-07-15",
+        "price": 120,
+        "guest": 2,
+        "size": "20*19m",
+        "description": "Facing the beachfront, Seagull Hotel Ltd offers 5-star accommodation in Coxs Bazar and has an outdoor swimming pool, garden and shared lounge. The property features a bar, as well as a private beach area. The hotel features sea views, a terrace, a 24-hour front desk, and free WiFi is available throughout the property.The hotel will provide guests with air-conditioned rooms with a wardrobe, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bath.A buffet, continental or Asian breakfast can be enjoyed at the property. At Seagull Hotel Ltd you will find a restaurant serving American, Chinese and Indian cuisine. Vegetarian and halal options can also be requested.At the accommodation guests are welcome to take advantage of a hot tub.The nearest airport is Cox's Bazar Airport, 2 km from Seagull Hotel Ltd.Couples particularly like the location — they rated it 8.5 for a two-person trip.",
+  
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "image": "https://i.ibb.co/RQx2gZy/terrace-lounge-with-rattan-armchairs-seaview-luxury-resort-summer-holiday-concept.jpg",
+        "category": "Family",
+        "host": {
+          "name": "Salman Khan",
+          "image": "https://example.com/host_image116.jpg",
+          "email": "salman.khan@example.com"
+        }
+      }
+   
+  ]
+  

@@ -1,8 +1,10 @@
+
 import Categories from "../../Category/Categories";
 import Hero from "../../components/Shared/Hero";
 
 
 const Home = () => {
+   
     return (
         <div>
             <Hero/>

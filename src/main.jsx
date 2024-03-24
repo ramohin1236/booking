@@ -5,7 +5,7 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router/roouter.jsx'
 import AuthProvider from './AuthProvider/AuthProvider.jsx'
-
+import "react-datepicker/dist/react-datepicker.css";
 import { Toaster } from 'react-hot-toast';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

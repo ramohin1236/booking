@@ -18,7 +18,7 @@ const Categorybox = ({label, icon: Icon,selected}) => {
         const updatedQuery ={...currentQuery, category: label}
 
         const url = qs.stringifyUrl({
-            url: '/rooms',
+            url: '/room',
             query: updatedQuery,
         })
         navigate(url)
