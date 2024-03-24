@@ -12,6 +12,8 @@ import { createUserWithEmailAndPassword,
     signInWithPopup,
     signOut,
     updateProfile,} from 'firebase/auth'
+import { removeToken } from "../api/auth";
+
 
 
 
@@ -57,9 +59,9 @@ const AuthProvider = ({children}) => {
       }
     
       // 5. Logout
-      const logout = () => {
+      const logout =async() => {
         setLoading(true)
-        localStorage.removeItem('aircnc-token')
+        await removeToken
         return signOut(auth)
       }
     

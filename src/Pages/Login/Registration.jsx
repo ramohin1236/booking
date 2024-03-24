@@ -4,10 +4,11 @@ import { AuthContext } from './../../AuthProvider/AuthProvider';
 import { imageUpload } from "../../components/Shared/uplodadImage";
 import toast from "react-hot-toast";
 import { ImSpinner9 } from 'react-icons/im';
+import { getToken, saveUser } from "../../api/auth";
 
 
 const Registration = () => {
-    const {createUser,updateUserProfile,verifyEmail,loading,signInWithGoogle}=useContext(AuthContext);
+    const {createUser,updateUserProfile,verifyEmail,loading,signInWithGoogle,logout}=useContext(AuthContext);
 
     const navigate =useNavigate()
     const location =useLocation()
@@ -32,17 +33,20 @@ const Registration = () => {
 
             // save userName & photo
             await updateUserProfile(name, imageData?.data?.display_url)
+            
              .then(
-                verifyEmail()
+               verifyEmail()
                 .then((()=>{toast.success("Cheak your email")}))
              ) 
-            
-    // save user daata in database
+      // save user daata in database
+      const dbResponse = await saveUser(result?.user)
+      console.log(dbResponse);
         
 
-            // get token form user
-        
-            navigate(from, {replace: true})
+         // get token form user
+         await getToken(result?.user?.email)
+             logout()
+            navigate('/login')
            
          }catch(err){
              toast.error(err?.message)
@@ -51,14 +55,29 @@ const Registration = () => {
     }
 
 
-const handleGoogleSignIn = ()=>{
-    signInWithGoogle()
-    .then(result=>{
-        console.log(result.user)
-        navigate(from, {replace: true})
-    })
-    
-}
+    const handleGoogleSignIn =async ()=>{
+        try{
+           
+
+            // user registration with google
+            const result = await signInWithGoogle();
+
+        
+            
+    // save user daata in database
+            const dbResponse = await saveUser(result?.user)
+            console.log(dbResponse);
+
+            // get token form user
+            await getToken(result?.user?.email)
+            navigate(from, {replace: true})
+            toast.success('User Create Successfully!')
+           
+         }catch(err){
+             toast.error(err?.message)
+         }
+        
+    }
 
 
 

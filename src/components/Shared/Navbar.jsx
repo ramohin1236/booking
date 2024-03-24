@@ -4,11 +4,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
-    const {logout,user}=useContext(AuthContext);
+    const {user,logout}=useContext(AuthContext);
 
-    const handleLogOut=()=>{
-        logout()
-    }
+    
 
     return (
         <div className="navbar bg-blue-700 text-white font-bold h-36">
@@ -23,7 +21,7 @@ const Navbar = () => {
             user && user? <div>
             <p>Welcome to <span className="font-bold md:text-3xl block">{user.displayName}</span></p>
             <button 
-            onClick={handleLogOut}
+            onClick={logout}
             className="btn ">Sign Out</button>
             </div> :<>
                  <Link to='/login'> <button className="btn btn-active bg-white text-blue-500 font-bold max-sm:w-20">Sign In</button></Link>

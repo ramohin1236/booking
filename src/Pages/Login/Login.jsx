@@ -6,6 +6,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { ImSpinner9 } from 'react-icons/im';
+import { getToken, saveUser } from '../../api/auth';
 
 
 const Login = () => {
@@ -30,9 +31,10 @@ console.log(userEmail);
             // login registration
             const result = await signin(email,password);
     
-     console.log(result);
+     
     
             // get token form user
+           await getToken(result?.user?.email)
             navigate(from, {replace: true})
             toast.success('Login Successfully!')
            setLoading(false)
@@ -43,12 +45,27 @@ console.log(userEmail);
     }
 
 
-    const handleGoogleSignIn = ()=>{
-        signInWithGoogle()
-        .then(result=>{
-            console.log(result.user)
+    const handleGoogleSignIn =async ()=>{
+        try{
+           
+
+            // user registration with google
+            const result = await signInWithGoogle();
+
+        
+            
+    // save user daata in database
+            const dbResponse = await saveUser(result?.user)
+            console.log(dbResponse);
+
+            // get token form user
+            await getToken(result?.user?.email)
             navigate(from, {replace: true})
-        })
+            toast.success('User Create Successfully!')
+           
+         }catch(err){
+             toast.error(err?.message)
+         }
         
     }
 
