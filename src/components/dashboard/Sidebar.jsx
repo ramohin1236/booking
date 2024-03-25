@@ -1,12 +1,16 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight, FaBars } from "react-icons/fa";
 import GuesMenu from "./GuesMenu";
+import AdminMenu from './AdminMenu';
+import HostMenu from './HostMenu';
 
 
 const Sidebar = ({ role, loading }) => {
+
     const navigate=useNavigate()
     const { user, logout } = useContext(AuthContext)
     const [isActive, setActive] = useState('false')
@@ -74,14 +78,14 @@ const Sidebar = ({ role, loading }) => {
 
           {/* Nav Items */}
           <div className='flex flex-col justify-between flex-1 mt-6'>
-            {/* <nav>
+            <nav>
               {role && role !== 'requested' ? (
-                <>{role === 'admin' ? <AdminMenu /> : <HostMenu />} </>
+                <>{role === 'admin' ? <AdminMenu /> : <GuesMenu/> } </>
               ) : (
-                <UserMenu />
+                <HostMenu />
               )}
-            </nav> */}
-            <GuesMenu/>
+            </nav>
+           
           </div>
         </div>
 

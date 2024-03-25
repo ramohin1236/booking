@@ -45,27 +45,21 @@ console.log(userEmail);
     }
 
 
-    const handleGoogleSignIn =async ()=>{
-        try{
-           
+    const handleGoogleSignIn = ()=>{
+       
+        signInWithGoogle().then(result => {
+            console.log(result.user)
+            getToken(result?.user?.email)
+            navigate(from, { replace: true })
+          })
 
-            // user registration with google
-            const result = await signInWithGoogle();
+           
 
         
             
-    // save user daata in database
-            const dbResponse = await saveUser(result?.user)
-            console.log(dbResponse);
-
-            // get token form user
-            await getToken(result?.user?.email)
-            navigate(from, {replace: true})
-            toast.success('User Create Successfully!')
+  
            
-         }catch(err){
-             toast.error(err?.message)
-         }
+        
         
     }
 

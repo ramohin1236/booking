@@ -11,14 +11,7 @@ const BecomeAhost = () => {
     const [loading, setLoading] = useState(true)
   
 
-    useEffect(()=>{
-     getRole(user?.email)
-     .then(data=>{
-        console.log(data)
-    setRole(data)
-    setLoading(false)
-    })
-    },[user])
+  
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -33,19 +26,27 @@ const BecomeAhost = () => {
                 role: 'requested',
                 email: user?.email,
               }
-              hostRequest(hostData).then(data => console.log(data))
+              hostRequest(hostData)
+             
+              .then(data=>console.log(data))
         })
-         
- 
-        
-      
+     
       }
+
+      useEffect(()=>{
+        getRole(user?.email)
+        .then(data=>{
+           console.log(data)
+       setRole(data)
+       setLoading(false)
+       })
+       },[user])
 
     return (
         <>
 
      
-        {role ? (
+        {role === "requested"? (
           <div className='h-screen text-gray-600 flex flex-col justify-center items-center pb-16 text-xl lg:text-3xl'>
             Request Sent, wait for admin approval
           </div>
