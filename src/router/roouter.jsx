@@ -6,6 +6,9 @@ import Registration from "../Pages/Login/Registration";
 import CoomingSoon from "../Pages/CoomingSoon";
 import RoomHoom from "../Pages/RoomHoom";
 import RoomDetails from "../Pages/RoomDetails";
+import SearchResults from "../Pages/SearchResults";
+import ChekOut from "../components/ChekOut/ChekOut";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -29,6 +32,14 @@ export const router = createBrowserRouter([
         {
             path: '/service-details',
             element: <RoomDetails/>
+        },
+        {
+            path: '/service-result',
+            element: <SearchResults/>
+        },
+        {
+            path: '/chekout',
+            element: <PrivateRoute><ChekOut/></PrivateRoute>
         },
         
       ]

@@ -2,11 +2,16 @@
 import { FaHome, FaStar, FaUser } from "react-icons/fa";
 import { HiCheckBadge } from "react-icons/hi2";
 import { MdCleaningServices } from "react-icons/md";
-import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { LiaHandPointRightSolid } from "react-icons/lia";
 import { GiSandsOfTime } from "react-icons/gi";
+
+import ChekOut from "../components/ChekOut/ChekOutForm";
+import HomeIcons from "../components/HomeIcoons/HomeIcons";
+
 
 
 const RoomDetails = () => {
+ 
     return (
         <div>
       {/* Header */}
@@ -105,6 +110,32 @@ const RoomDetails = () => {
             </div>
           </div>
           <hr />
+          <p className="text-2xl font-bold  mt-8 mb-2">Availabel For Rooms</p>
+          <div className="flex gap-8 mb-12">
+                   <div>
+            <HomeIcons title={"Desk"} icon={LiaHandPointRightSolid}/> 
+                 <HomeIcons title={"Flat-screen TV"} icon={LiaHandPointRightSolid}/>
+                 <HomeIcons title={"Tea/Coffee maker"} icon={LiaHandPointRightSolid}/> 
+                 <HomeIcons title={"Refrigerator"} icon={LiaHandPointRightSolid}/> 
+                 <HomeIcons title={"Tile/marble floor"} icon={LiaHandPointRightSolid}/> 
+                
+                   </div>
+
+                   <div>
+                   <HomeIcons title={"Bath"} icon={LiaHandPointRightSolid}/> 
+           <HomeIcons title={"Free toiletries"} icon={LiaHandPointRightSolid}/>
+           <HomeIcons title={"Shower"} icon={LiaHandPointRightSolid}/> 
+           <HomeIcons title={"Bathrobe"} icon={LiaHandPointRightSolid}/>
+           <HomeIcons title={"Toilet"} icon={LiaHandPointRightSolid}/> 
+                   </div>
+                   <div>
+                   <HomeIcons title={"Slippers"} icon={LiaHandPointRightSolid}/>
+                   <HomeIcons title={"Hairdryer"} icon={LiaHandPointRightSolid}/> 
+           <HomeIcons title={"Toilet paper"} icon={LiaHandPointRightSolid}/>
+                   </div>
+            </div>
+
+            <p className="text-2xl font-bold  mt-8 mb-2">Description For Rooms</p>
           <div className='mt-4 text-gray-500'>
             <p>
               It's newly constructed 7 storied building maintaining building
@@ -142,7 +173,8 @@ const RoomDetails = () => {
         </div>
 
         {/* Cart */}
-        <div className='p-4 md:w-1/2 lg:w-1/3 w-full h-full rounded shadow-lg'>
+        <ChekOut/>
+        {/* <div className='p-4 md:w-1/2 lg:w-1/3 w-full h-full rounded shadow-lg'>
           <h1 className='text-gray-900 text-3xl title-font font-medium mb-2'>
             $35/ <span className='font-thin'>night</span>
           </h1>
@@ -161,8 +193,8 @@ const RoomDetails = () => {
           </div>
 
           <div className='flex border-t border-gray-200 py-2'>
-            {/* <span className='text-gray-500'>$34 x {totalNights} nights</span>
-            <span className='ml-auto text-gray-900'>${sub_total}</span> */}
+            <span className='text-gray-500'>$34 x {totalNights} nights</span>
+            <span className='ml-auto text-gray-900'>${sub_total}</span>
           </div>
           <div className='flex border-t border-gray-200 py-2'>
             <span className='text-gray-500'>Cleaning Fee</span>
@@ -174,20 +206,13 @@ const RoomDetails = () => {
           </div>
           <div className='flex border-t border-b mb-6 border-gray-200 py-2'>
             <span className='text-gray-900 font-bold'>Total</span>
-            {/* <span className='ml-auto text-gray-900'>${total}</span> */}
+            <span className='ml-auto text-gray-900'>${total}</span>
           </div>
-          <div className='mt-6 mb-2'>
-            <button
-              type='submit'
-              className='w-full px-4 py-2 bg-blue-500 text-white font-bold rounded-md'
-            >
-              Reserve
-            </button>
-          </div>
+         
           <p className='text-center text-gray-400 mb-6'>
             You won't be charged yet!
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
     );
