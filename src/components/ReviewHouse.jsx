@@ -5,7 +5,9 @@ import { FaBanSmoking } from "react-icons/fa6";
 
 
 
+
 const ReviewHouse = () => {
+    
     return (
         <div>
             <p className="text-4xl font-bold">Review house rules</p>

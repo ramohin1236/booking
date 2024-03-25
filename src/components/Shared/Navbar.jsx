@@ -23,7 +23,7 @@ const Navbar = () => {
             <button 
             onClick={logout}
             className="btn btn-sm">Sign Out</button>
-                             <Link to='/login'> <button className="btn btn-sm bg-white   ">Dashboard</button></Link>
+                             <Link to='/dashboard'> <button className="btn btn-sm bg-white   ">Dashboard</button></Link>
 
             </div> :<>
                  <Link to='/login'> <button className="btn btn-active bg-white text-blue-500 font-bold max-sm:w-20">Sign In</button></Link>

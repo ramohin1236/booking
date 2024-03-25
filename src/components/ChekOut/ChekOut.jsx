@@ -1,8 +1,58 @@
 import { Tab } from '@headlessui/react'
 import Chekoutone from './Chekoutone';
 import ReviewHouse from '../ReviewHouse';
+import WhosComing from './WhosComing';
+import { useContext, useState } from 'react';
+import Payment from './Payment';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { saveBooking } from '../../api/bookings';
+import toast from 'react-hot-toast';
 
 const ChekOut = () => {
+    const [selectedIndex,setSelectedIndex]=useState(0)
+    const { user } = useContext(AuthContext)
+    const homeData = {
+      _id: '60ehjhedhjdj3434',
+      location: 'Dhaka, Bangladesh',
+      title: 'Huge Apartment with 4 bedrooms',
+      image: 'https://i.ibb.co/YPXktqs/Home1.jpg',
+      from: '17/11/2022',
+      to: '21/11/2022',
+      host: {
+        name: 'John Doe',
+        image: 'https://i.ibb.co/6JM5VJF/photo-1633332755192-727a05c4013d.jpg',
+        email: 'johndoe@gmail.com',
+      },
+      price: 98,
+      total_guest: 4,
+      bedrooms: 2,
+      bathrooms: 2,
+      ratings: 4.8,
+      reviews: 64,
+    }
+    const [bookingData, setBookingData]=useState({
+        homeId: homeData?._id,
+        hostEmail:homeData?.host?.email,
+        message:"",
+        totalPrice: parseFloat(homeData?.price )+31,
+        guestEmail: user?.email,
+    })
+   
+
+    const handleBooking=async()=>{
+       
+        try{
+         await saveBooking(bookingData)
+    
+         console.log(bookingData);
+            toast.success("Room booked successfully") 
+        }
+        catch(err){
+            console.log(err)
+            toast.error(err.message)  
+        }
+       
+    }
     return (
         <div className='container mx-auto'>
          <div className="flex flex-col md:flex-col lg:flex-row xl:flex-row">
@@ -58,8 +108,18 @@ const ChekOut = () => {
                 <Tab.Panel>
                     <ReviewHouse/>
                 </Tab.Panel>
-                <Tab.Panel>Ra mohin</Tab.Panel>
-                <Tab.Panel>taka de</Tab.Panel>
+                <Tab.Panel>
+                
+                    <WhosComing
+                    bookingData={bookingData}
+                    setBookingData={setBookingData}
+                     host={homeData?.host}
+                    setSelectedIndex={setSelectedIndex}
+                    />
+                </Tab.Panel>
+                <Tab.Panel>
+                    <Payment handleBooking={handleBooking}/>
+                </Tab.Panel>
             </Tab.Panels>
         </Tab.Group>
     </div>
