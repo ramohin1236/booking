@@ -15,6 +15,7 @@ import BecomeAhost from "../Pages/Dashboard/BecomeAhost";
 import MyBookings from "../components/dashboard/MyBookings";
 import AllUsers from "../Pages/Dashboard/AllUsers";
 import AllBookings from "../Pages/Dashboard/AllBookings";
+import AddHome from "../components/dashboard/AddHome";
 
 
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
             {
                 path: 'all-bookings',
                 element: <PrivateRoute><AllBookings/></PrivateRoute>
+            },
+            {
+                path: 'add-home',
+                element: <PrivateRoute><AddHome/></PrivateRoute>
             },
         ]
     },
